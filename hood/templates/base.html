@@ -1,0 +1,49 @@
+{% load bootstrap3 %}
+{% load static%}
+{% load cloudinary %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% if title %}
+    <title>FoxHood - {{title}}</title>
+    {% else %}
+    <title> FoxHood</title>
+    {% endif %}
+    {{form.media}}
+
+    {% block styles %}
+    {% bootstrap_css %}
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        footer {
+            background-color: rgb(5, 5, 48);
+            box-sizing: border-box;
+            color: white;
+            padding: 20px;
+            overflow: hidden;
+            height: 80px;
+            width: 100%;
+        }
+    </style>
+    {% endblock %}
+
+</head>
+
+{% include "navbar.html" %}
+
+<body>
+    {% block content %} {%endblock%}
+
+    {% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% bootstrap_javascript %}
+    {% endblock %}
+</body>
+
+</html

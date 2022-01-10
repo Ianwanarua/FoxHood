@@ -1,0 +1,130 @@
+{%extends 'base.html'%}
+{% load bootstrap3 %}
+{% block content %}
+<style>
+    .panel {
+        border: none;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-12">
+            <div class="panel panel-default" style="margin-top:5%">
+                <img class="card-img-top mb-10 img-responsive" src="{{hood.hood_photo.url}}"
+                    style="height:auto; width:100%">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p> <span style="font-weight: 700;">Name : </span> {{hood.hood_name}} </p>
+                            <p><span style="font-weight: 700;">Location : </span> {{ hood.hood_location}}</p>
+                            <p> <span style="font-weight: 700;">Description : </span> {{ hood.hood_description  }} </p>
+                            <p> <span style="font-weight: 700;"> {{ hood.hood_location}} Police Toll : </span> {{ hood.Police_Toll  }} </p>
+                            <p> <span style="font-weight: 700;"> {{ hood.hood_location}} Hospital Toll : </span> {{ hood.Hospital_Toll  }} </p>
+                            <br>
+                            <div style="padding-top:1%;padding-bottom:1%">
+                                {%if request.user.profile.neighbourhood == hood %}
+
+                                <a class="btn btn-warning" href="{%url 'leavehood' hood.id%}">Leave Hood</a>
+
+                                {%elif not request.user.profile.neighbourhood%}
+
+
+                                <a class="btn btn-success" href="{%url 'joinhood' hood.id%}">Join Hood</a>
+
+                                {%endif%}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" style="text-align: center;">
+            <h3 class="mt-4" style="font-weight: 500; ">Business in {{ hood.hood_location}} Hood</h3>
+            <a class="btn btn-success" href="{%url 'new_business'%}"><i class="fa fa-plus-circle"></i><span style="color:white"></span>Add business</a>
+            <hr>
+
+            {% for business in business%}
+            <!-- {% if biz_available %}
+            <h5>There are no businesses in this hood yet</h5>
+            <a class="btn btn-sm btn-info btn-block" style="margin-top:4px;" href="{%url 'new_business'%}">Add business</a>
+
+            {% else %}
+            <p> <span style="font-weight: 700;">Name : </span> {{business.name}} </p>
+            <p>fghj</p>
+            <a class="btn btn-sm btn-info btn-block" style="margin-top:4px;" href="{%url 'new_business'%}">Add business</a>
+
+            {% endif %}-->
+            <!-- <p> <span style="font-weight: 700;">Name : </span> {{business.business_name}} </p> -->
+
+            <a href="#{{business.id}}" data-toggle="modal" data-target="#{{business.id}}"
+                style="font-weight: 700; font-size: 12pt;">
+                <li>{{business.business_name}}</li>
+            </a>
+            <div class="modal fade" id="{{business.id}}" role="dialog">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title" style="color:navy; font-weight:700">{{business.business_name}}
+                                Business</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-justify"> <b>Description : </b> {{business.business_desc}} </p>
+                            <p><b>Location : </b> {{business.business_hood}}</p>
+                            <p><b>Email : </b> {{business.business_email}}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            {%endfor%}
+            <!-- <a class="btn btn-sm btn-info btn-block" style="margin-top:5%; " href="{%url 'new_business'%}">Add
+                Business</a> -->
+                
+            <hr>
+
+            <!-- <p style="color:silver"> N/B: Click name to Checkout Business</p> -->
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+
+    <h2 class="text-center" style="font-family: 'Oregano', cursive;">Posts</h2>
+    <div class="text-center">
+        <a href="{%url 'post'%}" class="btn btn-success"><i class="fa fa-plus-circle"></i><span style="color:white">Add
+                Posts</span></a>
+
+    </div>
+
+    <hr>
+    <div class="row">
+        {% for post in post %}
+        <div class=" col-sm-12 col-lg-4 mb-5">
+            <div class="card">
+                <div class="mt-3 ml-3 mr-3" style="box-shadow: 0vh 0vh 5vh gainsboro; padding:2%">
+                    <p style="font-size:15pt"><b>{{post.title}}</b></p>
+                    <hr>
+                    <p><b>Post:</b> {{post.content}}</p>
+                    <p><b>Neighborhood:</b> {{post.neighbourhood}}</p>
+                    <div>
+                        <img src="{{post.image.url}}" class="img-responsive" alt="{{image.title}}"
+                            style="width:100%;width:100%">
+                    </div>
+                    <hr>
+
+                    <p><b>By:</b> {{post.user.username}}</p>
+                    <p style="color:rgb(112, 110, 110); font-size:9pt"><b>Posted on:</b> {{post.timestamp}}</p>
+
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<style>
+    .container-fluid {
+        margin-left: 5%;
+        margin-right: 5%;
+
+    }
+</style>
+<div class="container-fluid">
+    <div class="row">
+
+        {% for hood in hoods %}
+        <div class="col-lg-4">
+            <div
+                style="background-color: rgb(181, 209, 203);box-sizing: border-box; margin-top:2%;box-shadow: 0vh 0vh 1vh gainsboro;">
+                <div class="row" style="padding-top: 1%">
+                    <div class="col-md-12">
+                        <h4 style="font-weight:600;">Hood: <a href="{% url 'view_hood' id=hood.id %}" class="text-right"
+                                style="text-decoration: none;">{{hood.hood_name}}
+                            </a></4>
+
+                    </div>
+                </div>
+                <div class="row" style="font-size:10pt;">
+                    <div class="col-md-6" style="padding-bottom: 2%;font-weight:600;"> Location: {{hood.hood_location}}
+                    </div>
+                </div>
+                <div class="">
+                    <a href="{% url 'view_hood' id=hood.id %}">
+                        <img src="{{hood.hood_photo.url}}" class="img-responsive" alt="{{image.hood_name}}"
+                            style="width:100%;width:100%">
+                        <div class="overlay">
+                        </div>
+                    </a>
+                </div>
+
+
+                <div style="padding-top:1%;padding-bottom:1%;">
+                    {%if request.user.profile.neighbourhood == hood %}
+
+                    <a class="btn btn-warning" href="{%url 'leavehood' hood.id%}">Leave Hood</a>
+
+                    {%elif not request.user.profile.neighbourhood%}
+
+
+                    <a class="btn btn-success" href="{%url 'joinhood' hood.id%}">Join Hood</a>
+
+                    {%endif%}
+                </div>
+
+            </div>
+        </div>
+
+        {% endfor %}
+
+
+    </div>
+</div>
+
+{% endblock %}
