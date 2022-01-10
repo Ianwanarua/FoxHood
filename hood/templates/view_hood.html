@@ -46,18 +46,7 @@
             <hr>
 
             {% for business in business%}
-            <!-- {% if biz_available %}
-            <h5>There are no businesses in this hood yet</h5>
-            <a class="btn btn-sm btn-info btn-block" style="margin-top:4px;" href="{%url 'new_business'%}">Add business</a>
-
-            {% else %}
-            <p> <span style="font-weight: 700;">Name : </span> {{business.name}} </p>
-            <p>fghj</p>
-            <a class="btn btn-sm btn-info btn-block" style="margin-top:4px;" href="{%url 'new_business'%}">Add business</a>
-
-            {% endif %}-->
-            <!-- <p> <span style="font-weight: 700;">Name : </span> {{business.business_name}} </p> -->
-
+ 
             <a href="#{{business.id}}" data-toggle="modal" data-target="#{{business.id}}"
                 style="font-weight: 700; font-size: 12pt;">
                 <li>{{business.business_name}}</li>
