@@ -36,14 +36,12 @@
                     </a>
                 </div>
 
-
                 <div style="padding-top:1%;padding-bottom:1%;">
                     {%if request.user.profile.neighbourhood == hood %}
 
                     <a class="btn btn-warning" href="{%url 'leavehood' hood.id%}">Leave Hood</a>
 
                     {%elif not request.user.profile.neighbourhood%}
-
 
                     <a class="btn btn-success" href="{%url 'joinhood' hood.id%}">Join Hood</a>
 
@@ -52,9 +50,7 @@
 
             </div>
         </div>
-
         {% endfor %}
-
 
     </div>
 </div>
