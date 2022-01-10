@@ -20,9 +20,9 @@ import dj_database_url
 from decouple import config,Csv
 
 cloudinary.config(
-  cloud_name = "galeria2",
-  api_key = "883299394337371",
-  api_secret = "D1AwbwEnV0Kgz_mFMchy9MERLuM",
+  cloud_name = "dcetbswco",
+  api_key = "388726745484143",
+  api_secret = "iAEtVhCE_48_9murHDcO38TXIEg",
   secure = True
 )
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
