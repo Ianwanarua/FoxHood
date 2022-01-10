@@ -34,7 +34,6 @@
 
                                 {%endif%}
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -44,7 +43,6 @@
             <h3 class="mt-4" style="font-weight: 500; ">Business in {{ hood.hood_location}} Hood</h3>
             <a class="btn btn-success" href="{%url 'new_business'%}"><i class="fa fa-plus-circle"></i><span style="color:white"></span>Add business</a>
             <hr>
-
             {% for business in business%}
  
             <a href="#{{business.id}}" data-toggle="modal" data-target="#{{business.id}}"
@@ -68,7 +66,6 @@
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -79,7 +76,6 @@
         </div>
         <div class="col-md-1"></div>
     </div>
-
     <h2 class="text-center" style="font-family: 'Oregano', cursive;">Posts</h2>
     <div class="text-center">
         <a href="{%url 'post'%}" class="btn btn-success"><i class="fa fa-plus-circle"></i><span style="color:white">Add
