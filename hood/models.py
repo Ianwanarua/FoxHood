@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.dispatch import receiver
 
-
 # Create your models here.
 class Neighbourhood(models.Model):
     hood_name = models.CharField(max_length=200)
