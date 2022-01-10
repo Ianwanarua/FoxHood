@@ -78,11 +78,9 @@
     </div>
     <h2 class="text-center" style="font-family: 'Oregano', cursive;">Posts</h2>
     <div class="text-center">
-        <a href="{%url 'post'%}" class="btn btn-success"><i class="fa fa-plus-circle"></i><span style="color:white">Add
-                Posts</span></a>
-
+        <a href="{%url 'post'%}" class="btn btn-success"><i class="fa fa-plus-circle"></i><span style="color:white">
+            Add Posts</span></a>
     </div>
-
     <hr>
     <div class="row">
         {% for post in post %}
@@ -98,10 +96,8 @@
                             style="width:100%;width:100%">
                     </div>
                     <hr>
-
                     <p><b>By:</b> {{post.user.username}}</p>
                     <p style="color:rgb(112, 110, 110); font-size:9pt"><b>Posted on:</b> {{post.timestamp}}</p>
-
                 </div>
             </div>
         </div>
