@@ -85,24 +85,6 @@ class Business(models.Model):
     def delete_business(self):
         self.delete()
 
-    @classmethod
-    def get_business(cls, business_id):
-        business = cls.objects.get(id=business_id)
-        return business
-
-    @classmethod
-    def business_by_id(cls, id):
-        business = Business.objects.filter(id=id)
-        return business
-
-    def update_business(self):
-        name = self.business_name
-        self.business_name = name
-
-    @classmethod
-    def search_business(cls, name):
-        return cls.objects.filter(business_name__icontains=name).all()
-
 class Post(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=150)
