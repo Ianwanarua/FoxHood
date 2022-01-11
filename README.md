@@ -72,4 +72,4 @@ For queries reach me through [Ian.wanarua@student.moringaschool.com](ian.wanarua
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Copyright © 2021  [IAN WANARUA](https://github.com/Ianwanarua)
+Copyright © 2022  [IAN WANARUA](https://github.com/Ianwanarua)
