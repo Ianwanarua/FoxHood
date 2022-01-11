@@ -1,6 +1,6 @@
 # FoxHood
 
-![foxhood!](//hood/static/img/screen.png)
+![foxhood!](../hood/static/img/screen.png)
 
 ## Author
 
