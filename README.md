@@ -21,7 +21,7 @@ To view the site [Click here.](https://foxhood.herokuapp.com/)
 * A User can browse through the neighborhoods and join which suits them better. 
 * A User can create a hood if the hood is not available in the application.
 * A user can also create business and posts for various hoods.
-
+* A user can join a hood they like and also can leave the hood.
 ## Prerequisites
 
 For this system to work on your pc you need the following; 
