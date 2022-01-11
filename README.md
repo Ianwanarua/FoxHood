@@ -21,3 +21,13 @@ To view the site [Click here.](https://foxhood.herokuapp.com/)
 * A User can browse through the neighborhoods and join which suits them better. 
 * A User can create a hood if the hood is not available in the application.
 * A user can also create business and posts for various hoods.
+
+## Prerequisites
+
+For this system to work on your pc you need the following; 
+
+1. Python3.8
+2. Django
+3. Pip
+4. Virtual Environment(virtual)
+5. A text editor (Vscode)
