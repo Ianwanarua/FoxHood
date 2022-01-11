@@ -13,3 +13,11 @@ This is a django application that shows various neighborhoods. Users can see the
 ## Live Link
 
 To view the site [Click here.](https://foxhood.herokuapp.com/)
+
+## User Story
+
+* A User will be required to sign up if they dont have an account in the hood.
+* A User is able update their profile by adding a profile and also their picture.
+* A User can browse through the neighborhoods and join which suits them better. 
+* A User can create a hood if the hood is not available in the application.
+* A user can also create business and posts for various hoods.
