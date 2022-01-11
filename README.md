@@ -57,7 +57,6 @@ To get the code..
 * Heroku
 * Html
 * Css
-* Javascript
 * Bootstrap4
 
 ## Known Bugs
