@@ -31,3 +31,13 @@ For this system to work on your pc you need the following;
 3. Pip
 4. Virtual Environment(virtual)
 5. A text editor (Vscode)
+
+## Development Installation
+
+To get the code..
+
+1. Clone the repository:
+ `git clone  https://github.com/Ianwanarua/FoxHood.git`
+
+2. Move to the folder and install requirements
+ ` cd  FoxHood`
