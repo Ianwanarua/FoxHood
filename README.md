@@ -41,3 +41,11 @@ To get the code..
 
 2. Move to the folder and install requirements
  ` cd  FoxHood`
+3. In the projects root directory, install the virtualenv library using pip and create a virtual environment. Run the following commands respectively:
+    - **`pip install virtualenv`**
+    - **`virtualenv virtual`**
+    - **`source virtual/bin/activate`**
+        * Note that you can exit the virtual environment by running the command **`deactivate`**
+4. Download the all dependencies in the requirements.txt using **`pip install -r requirements.txt`**
+5. Launch the application locally by running the command **`python manage.py runserver`** and copying the link given on the termnal on your browser.
+    - To post photos, run the command  **`python manage.py createsuperuser`** to create an admin account in order to post. Access to the admin panel is by adding the path /admin to the address bar.
