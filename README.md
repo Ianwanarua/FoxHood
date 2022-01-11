@@ -1,3 +1,3 @@
 # FoxHood
 
-![foxhood!](pic)
+![foxhood!](//hood/static/img/screen.png)
